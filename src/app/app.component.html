@@ -1,0 +1,14 @@
+<p>SCORE: {{ snake.bodyIndexes.length - 1 }}</p>
+<div id="map" (click)="timeGoes()">
+  <div
+    *ngFor="let i of this.grid"
+    class="cell"
+    [class.head]="snakeHeadIndex() === i"
+    [class.body]="snake.bodyIndexes.includes(i)"
+    [class.fruit]="fruitIndex === i"
+  ></div>
+</div>
+<p *ngIf="isGameover()">
+  GAME OVER<br />
+  <button onclick="location.reload()">RETRY</button>
+</p>

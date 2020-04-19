@@ -1,0 +1,28 @@
+:host {
+  outline: none;
+}
+
+#map {
+  --grid-size: 10;
+
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 30px);
+  grid-template-rows: repeat(var(--grid-size), 30px);
+}
+
+.cell {
+  border: 1px solid white;
+  background: whitesmoke;
+}
+
+.cell.body {
+  background: darkgray;
+}
+
+.cell.fruit {
+  background: orangered;
+}
+
+.cell.head {
+  background: dimgray;
+}
